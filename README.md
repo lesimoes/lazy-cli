@@ -7,3 +7,13 @@
 
 Tava com insonia e decidi criar um node-cli similar ao NTL (só pra ver se conseguia)... Na próxima insonia completo o resto do projeto.
 
+## Instalar
+
+```bash
+npm i ltl-cli
+```
+
+## Usar
+```bash
+lz
+```
