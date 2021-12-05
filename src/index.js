@@ -19,7 +19,7 @@ const questions = [
 (async () => {
 
     let packageOptionsFile = fs.readFileSync('./package.json')
-    let packageOptionsParsed = JSON.parse(packageOptions)
+    let packageOptionsParsed = JSON.parse(packageOptionsFile)
 
     const choices = Object.keys(packageOptionsParsed.scripts).map((value) => ({
         title: value,
