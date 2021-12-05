@@ -1,0 +1,19 @@
+{
+  "name": "ltl-cli",
+  "version": "1.0.3",
+  "description": "",
+  "main": "./src/index.js",
+  "bin": {
+    "lz": "./bin/cli.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\"",
+    "hello": "nodemon src/app.js"
+  },
+  "preferGlobal": "true", 
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "prompts": "^2.4.2"
+  }
+}
