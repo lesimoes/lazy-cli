@@ -1,19 +1,29 @@
 {
-  "name": "ltl-cli",
-  "version": "1.0.3",
-  "description": "",
-  "main": "./src/index.js",
-  "bin": {
-    "lz": "./bin/cli.js"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\"",
-    "hello": "nodemon src/app.js"
-  },
-  "preferGlobal": "true", 
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "prompts": "^2.4.2"
-  }
+    "name": "ltl-cli",
+    "version": "1.0.4",
+    "description": "",
+    "main": "./src/index.js",
+    "bin": {
+        "lz": "./bin/cli.js"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\"",
+        "hello": "nodemon src/app.js",
+        "start:dev:[ltl]": "npx nodemon ./src/index.js",
+        "start:prod:[ltl]": "node ./src/index.js",
+        "test:watchAll:[ltl]": "npx jest --watchAll"
+    },
+    "preferGlobal": "true",
+    "author": {
+        "name": "Leandro Simões",
+        "email": "lesimoes0@gmail.com"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/lesimoes/lazy-cli"
+      },
+    "license": "ISC",
+    "dependencies": {
+        "prompts": "^2.4.2"
+    }
 }

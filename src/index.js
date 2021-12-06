@@ -9,7 +9,7 @@ const questions = [
     message: 'Pick a script',
     choices: [
       {
-        title: 'createss',
+        title: 'create-scripts',
         value: 'ltl'
       }
     ],
@@ -30,7 +30,14 @@ const questions = [
     const response = await prompts(questions);
     if (response.command === 'ltl') {
       //create custom scripts
-      console.log('create', packageOptionsParsed.scripts)
+      packageOptionsParsed.scripts = {
+        ... packageOptionsParsed.scripts,
+        'start:dev:[ltl]': `npx nodemon ${packageOptionsParsed.main}`,
+        'start:prod:[ltl]': `node ${packageOptionsParsed.main}`,
+        'test:watchAll:[ltl]': `npx jest --watchAll`,
+      }
+      fs.writeFileSync('./package.json', JSON.stringify(packageOptionsParsed), 'utf8');
+      console.log('create', packageOptionsParsed)
       return;
     }
 
